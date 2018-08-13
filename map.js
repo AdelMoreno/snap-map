@@ -7,3 +7,10 @@ people = people.map(item => {
 });
 
 console.log(people);
+
+people.sort(function(a, b) {
+	var emailA = a.email.toLowerCase(), emailB = b.email.toLowerCase();
+	if(emailA < emailB) return -1;
+	if(emailA > emailB) return 1;
+	return 0;
+});
